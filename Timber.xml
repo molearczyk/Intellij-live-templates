@@ -1,0 +1,34 @@
+<templateSet group="Timber">
+  <template name="td" value="Timber.d(&quot;$CLASS$ $END$&quot;);" description="Timber.d" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ti" value="Timber.i(&quot;$CLASS$ $END$&quot;);" description="Timber.i" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="tv" value="Timber.v(&quot;$CLASS$ $END$&quot;);" description="Timber.v" toReformat="true" toShortenFQNames="true">
+    <variable name="CLASS" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="te" value="Timber.e($EX$, &quot;$CLASS$ $END$&quot;);" description="Timber.e" toReformat="true" toShortenFQNames="true">
+    <variable name="EX" expression="suggestFirstVariableName(&quot;Throwable&quot;)" defaultValue="" alwaysStopAt="false" />
+    <variable name="CLASS" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="tde" value="Timber.d($EX$, &quot;$CLASS$ $END$&quot;);" description="Timber.d(e,&quot;&quot;)" toReformat="true" toShortenFQNames="true">
+    <variable name="EX" expression="suggestFirstVariableName(&quot;Throwable&quot;)" defaultValue="" alwaysStopAt="false" />
+    <variable name="CLASS" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
