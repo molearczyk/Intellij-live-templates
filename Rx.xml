@@ -20,4 +20,21 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
+  <template name="rxObsMain" value=".observeOn(AndroidSchedulers.mainThread())$END$" description=".observeOn(AndroidSchedulers.mainThread())" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="rxSubMain" value=".subscribeOn(AndroidSchedulers.mainThread())$END$" description=".subscribeOn(AndroidSchedulers.mainThread())" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
 </templateSet>
