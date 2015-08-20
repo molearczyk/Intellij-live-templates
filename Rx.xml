@@ -20,14 +20,20 @@
       <option name="JAVA_DECLARATION" value="true" />
     </context>
   </template>
-  <template name="rxObsMain" value=".observeOn(AndroidSchedulers.mainThread())$END$" description=".observeOn(AndroidSchedulers.mainThread())" toReformat="true" toShortenFQNames="true">
+  <template name="obsOnMain" value=".observeOn(AndroidSchedulers.mainThread())$END$" description=".observeOn(AndroidSchedulers.mainThread())" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_CODE" value="true" />
     </context>
   </template>
-  <template name="rxSubMain" value=".subscribeOn(AndroidSchedulers.mainThread())$END$" description=".subscribeOn(AndroidSchedulers.mainThread())" toReformat="true" toShortenFQNames="true">
+  <template name="subsOnMain" value=".subscribeOn(AndroidSchedulers.mainThread())$END$" description=".subscribeOn(AndroidSchedulers.mainThread())" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="unsubscribe" value="if ($VAR$ != null &amp;&amp; !$VAR$.isUnsubscribed()) {&#10;    $VAR$.unsubscribe();&#10;    $VAR$ = null;&#10;}" description="unsubscribes subscriber and clean up" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="typeOfVariable(&quot;Subscription&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
 </templateSet>
