@@ -5,22 +5,7 @@
       <option name="JAVA_EXPRESSION" value="true" />
     </context>
   </template>
-  <template name="obsjn" value="Observable.just(null);&#10;$END$" description="Observable.just(null);" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="JAVA_STATEMENT" value="true" />
-      <option name="JAVA_EXPRESSION" value="true" />
-      <option name="JAVA_DECLARATION" value="false" />
-    </context>
-  </template>
-  <template name="rxLazyBehavior" value="private BehaviorSubject&lt;$T$&gt; $varName$;&#10;&#10;public void set$fvarName$ (@NonNull $T$ value) {&#10;    if($varName$ == null) {&#10;        $varName$ = BehaviorSubject.create(value);&#10;    } else {&#10;        $varName$.onNext(value);&#10;    }&#10;}&#10;&#10;public Observable&lt;$T$&gt; get$fvarName$AsObservable () {&#10;    if($varName$ == null) {&#10;        $varName$ = BehaviorSubject.create(null);&#10;    }&#10;    return $varName$.asObservable();&#10;}" description="lazy behavior subject" toReformat="true" toShortenFQNames="true">
-    <variable name="T" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="varName" expression="suggestFirstVariableName()" defaultValue="" alwaysStopAt="true" />
-    <variable name="fvarName" expression="capitalize(varName)" defaultValue="" alwaysStopAt="false" />
-    <context>
-      <option name="JAVA_DECLARATION" value="true" />
-    </context>
-  </template>
-  <template name="obsOnMain" value=".observeOn(AndroidSchedulers.mainThread())$END$" description=".observeOn(AndroidSchedulers.mainThread())" toReformat="true" toShortenFQNames="true">
+<template name="obsOnMain" value=".observeOn(AndroidSchedulers.mainThread())$END$" description=".observeOn(AndroidSchedulers.mainThread())" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_CODE" value="true" />
     </context>
@@ -28,12 +13,6 @@
   <template name="subsOnMain" value=".subscribeOn(AndroidSchedulers.mainThread())$END$" description=".subscribeOn(AndroidSchedulers.mainThread())" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_CODE" value="true" />
-    </context>
-  </template>
-  <template name="unsubscribe" value="if ($VAR$ != null &amp;&amp; !$VAR$.isUnsubscribed()) {&#10;    $VAR$.unsubscribe();&#10;    $VAR$ = null;&#10;}" description="unsubscribes subscriber and clean up" toReformat="false" toShortenFQNames="true">
-    <variable name="VAR" expression="typeOfVariable(&quot;Subscription&quot;)" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_STATEMENT" value="true" />
     </context>
   </template>
 </templateSet>
